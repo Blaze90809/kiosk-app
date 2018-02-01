@@ -15,26 +15,29 @@
         </div>
         <div ng-controller="SidenavController as sc" flex="25" class="flex-25">
             <md-card class="addCard">
-                <h1 class="purchase">Your Purchases</h1>
-                <div layout="row" class="layout-row">
-                    <div flex="48" class="flex-40">
-                        <h2>Products:</h2>
-                        <p ng-repeat="order in sc.orderTotal.purchases">
-                            {{order}}
-                        </p>
+                <div class="addCardStyle">
+                    <h1 class="purchase">Your Purchases</h1>
+                    <div layout="row" class="layout-row">
+                        <div flex="48" class="flex-40">
+                            <h2>Products</h2>
+                            <p ng-repeat="order in sc.orderTotal.purchases">
+                                {{order}}
+                            </p>
+                        </div>
+                        <div flex="48" class="flex-40">
+                            <h2>Cost</h2>
+                            <p ng-repeat="cost in sc.orderTotal.cost">
+                                {{cost}}
+                            </p>
+                        </div>
                     </div>
-                    <div flex="48" class="flex-40">
-                        <h2>Cost:</h2>
-                        <p ng-repeat="cost in sc.orderTotal.cost">
-                            {{cost}}
-                        </p>
+                    <div class="total">
+                        <h2>Total cost</h2>
+                        {{sc.total}}
                     </div>
-                </div>
-                <div class="total">
-                    <h2>Total cost:</h2>
-                    {{sc.total}}
                 </div>
             </md-card>
+            <md-button ng-click="sc.makePurchase(); sc.openToast()" class="md-raised md-primary">Make Purchase</md-button>
         </div>
     </div>
 </div>
