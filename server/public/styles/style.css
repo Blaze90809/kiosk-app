@@ -63,3 +63,11 @@ img {
 .purchase{
     text-align: center;
 }
+
+.button{
+    align-content: center;
+}
+
+.addCardStyle{
+    padding: 10px
+}

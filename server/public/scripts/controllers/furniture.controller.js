@@ -28,4 +28,14 @@ myApp.controller('FurnitureController', function($interval, $http, Service, $tim
         };
     }
 
+    fc.showAdvanced = function(ev) {
+        $mdDialog.show({
+          controller: DialogController,
+          templateUrl: 'dialog1.tmpl.html',
+          parent: angular.element(document.body),
+          targetEvent: ev,
+          clickOutsideToClose:true
+        })
+    }
+
 });//End Furniture Controller

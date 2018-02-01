@@ -14,13 +14,20 @@ myApp.service('Service', function ($http, $location) {
 
         self.totalCalc(cost);
         console.log(self.order)
-    }//End Function
+    };//End Function
 
     //This function calculates the total cost of the purchase.
     self.totalCalc = function(cost) {
         var costIn = cost;
         self.total = self.total + costIn;
         console.log(self.total);
-    }//End Total cost.
+    };//End Total cost.
+
+    //Resets variables for next customer.
+    self.makePurchase = function(){
+        self.total = 0;
+        self.order.purchases = [];
+        self.order.cost = [];
+    };//End purchase function.
 
 });//End Service
