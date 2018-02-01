@@ -55,3 +55,11 @@ img {
 .rightAdd{
     height: 100%;
 }
+
+.addCard{
+    min-height: 90% !important;
+}
+
+.purchase{
+    text-align: center;
+}

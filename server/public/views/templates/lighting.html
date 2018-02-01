@@ -1,15 +1,29 @@
 <div class="container">
     <h1>Lighting</h1>
-    <md-content>
-        <div class='md-padding' layout="row" layout-wrap>
-            <md-card flex="25" ng-repeat="name in lc.lighting.data" ng-click="lc.addOrders(name)">
-                <img ng-src="{{name.photo}}" class="md-card-image" alt="{{name.name}}" ng-style="{height: '200px'}">
-                <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-headline">{{name.name}}</span>
-                    </md-card-title-text>
-                </md-card-title>
-            </md-card>
+    <div layout="row" class="layout-row">
+        <div flex="70" class="flex-70">
+            <md-content>
+                <div class='md-padding' layout="row" layout-wrap>
+                    <md-card flex="30" ng-repeat="name in lc.lighting.data" ng-click="lc.addOrders(name)">
+                        <img ng-src="{{name.photo}}" class="md-card-image" alt="{{name.name}}" ng-style="{height: '200px'}">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">{{name.name}}</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                    </md-card>
+                </div>
+            </md-content>
         </div>
-    </md-content>
+        <div ng-controller="SidenavController as sc" flex="25" class="flex-25">
+            <md-card class="addCard">
+                <h1 class="purchase">Your Purchases</h1>
+                {{sc}} Product:
+                <p ng-repeat="order in sc.orderTotal">
+                    Product: {{order}} Cost: {{order}}
+                </p>
+
+                <md-card>
+        </div>
+    </div>
 </div>
