@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kiosk Site</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="vendors/angular/angular.js"></script>
+    <script type="text/javascript" src="vendors/angular-route/angular-route.min.js"></script>
+    <link href="vendors/angular-material/angular-material.css" rel="stylesheet" type="text/css">
+    <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-material/angular-material.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/furniture.controller.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/lighting.controller.js"></script>
+    <script src="scripts/controllers/sidnav.controller.js"></script>
+    <script src="scripts/services/service.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <main ng-view></main>
+    <div ng-include="'views/partials/add.html'"></div>
+    <footer ng-include="'views/partials/nav.html'"></footer>
+</body>
+
+</html>

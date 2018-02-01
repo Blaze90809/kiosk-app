@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Home</h1>
+    <md-content>
+        <div class='md-padding' layout="row" layout-wrap>
+            <md-card flex="25" ng-repeat="name in hc.home.data" ng-click="hc.addOrder(name)">
+                <img ng-src="{{name.photo}}" class="md-card-image" alt="{{name.name}}" ng-style="{height: '200px', width: 'auto'}">
+                <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{name.name}}</span>
+                </md-card-title-text>
+                </md-card-title>
+                </md-card-flex>
+        </div>
+    </md-content>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Furniture</h1>
+    <section layout="column" flex>
+        <div ng-controller="SidenavController as sc">
+            <md-sidenav md-component-id="right" class="md-sidenav-right">
+            </md-sidenav>
+
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+            </md-toolbar>
+
+            <!-- <md-content layout-margin> -->
+                {{sc}}
+            Product: <p ng-repeat="order in sc.orderTotal">
+               Product: {{order}}
+               Cost: {{order}}
+            </p>
+            <md-button ng-click="toggleLeft()" class="md-accent">
+                Close this Sidenav
+            </md-button>
+            <!-- </md-content> -->
+            </md-sidenav>
+        </div>
+    </section>
+    <md-content>
+        <div class='md-padding' layout='row' layout-wrap>
+            <md-card flex='25' ng-repeat="name in fc.furniture.data" ng-click="fc.addOrders(name)">
+                <img ng-src={{name.photo}} class="md-card-image" alt="{{name.name}}" ng-style="{height: '200px', width: 'auto'}">
+                <md-card-title>
+                    <span class="md-headline">{{name.name}}</span>
+                </md-card-title>
+            </md-card>
+        </div>
+    </md-content>
+</div>
