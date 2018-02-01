@@ -17,8 +17,9 @@ myApp.service('Service', function ($http, $location) {
     }//End Function
 
     //This function calculates the total cost of the purchase.
-    self.totalCalc = function (cost) {
-        self.total = self.total + cost;
+    self.totalCalc = function(cost) {
+        var costIn = cost;
+        self.total = self.total + costIn;
         console.log(self.total);
     }//End Total cost.
 
