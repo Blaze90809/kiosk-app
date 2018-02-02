@@ -1,7 +1,7 @@
 myApp.service('Service', function ($http, $location) {
     console.log('Service loaded');
     var self = this;
-    self.order = { purchases: [], cost: [] }//Stores data for purchases
+    self.order = { purchases: [], cost: [], total: 0 }//Stores data for purchases
     self.total = 0;//This is the total cost of the purchase.
 
     //This function is sending purchase item to self.order object.
@@ -19,13 +19,13 @@ myApp.service('Service', function ($http, $location) {
     //This function calculates the total cost of the purchase.
     self.totalCalc = function(cost) {
         var costIn = cost;
-        self.total = self.total + costIn;
+        self.order.total = self.order.total + costIn;
         console.log(self.total);
     };//End Total cost.
 
     //Resets variables for next customer.
     self.makePurchase = function(){
-        self.total = 0;
+        self.order.total = 0;
         self.order.purchases = [];
         self.order.cost = [];
     };//End purchase function.
