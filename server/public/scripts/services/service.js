@@ -2,7 +2,6 @@ myApp.service('Service', function ($http, $location) {
     console.log('Service loaded');
     var self = this;
     self.order = { purchases: [], cost: [], total: 0 }//Stores data for purchases
-    self.total = 0;//This is the total cost of the purchase.
 
     //This function is sending purchase item to self.order object.
     self.addOrders = function (orderIn) {
